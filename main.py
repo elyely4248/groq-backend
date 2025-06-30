@@ -27,3 +27,8 @@ async def groq_proxy(request: Request):
         json=body
     )
     return response.json()
+
+
+@app.get("/")
+def home():
+    return {"status": "Server is running!"}
